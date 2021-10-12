@@ -8,9 +8,14 @@
 # current_time.set_alarm()
 
 from product import Product
+from customer import Customer
 from shopping_cart import ShoppingCart
 
-ShoppingCart.add_product('water mellon')
+cart = ShoppingCart
+cust = Customer
+product = Product
 
-
+cust.customer_name('Hello')
+cart.add_product()
+cart.cart_total('$')
 
