@@ -1,12 +1,12 @@
 class Product:
     def __init__(self, product_cat, product_name, product_price):
-        product_cat = []
-        product_name = []
-        product_price = [int(i) for i in product_price]
         self.product_name = product_name
         self.product_type = product_cat
         self.product_price = product_price
-    
+        # product_cat = []
+        # product_name = []
+        # product_price = [int(i) for i in product_price]
+
     # def add_product(product_add):
     #     product_cat = input('What type of product are you looking for?: ')
     #     Product.product_cat = product_cat

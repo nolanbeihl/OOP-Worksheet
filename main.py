@@ -9,16 +9,28 @@
 
 from product import Product
 from customer import Customer
-from shopping_cart import ShoppingCart
+                       
+customer_object = Customer("Nolan")
 
-cart = ShoppingCart
-cust = Customer
-product = Product
+tent = Product("Camping", "Tent", 300)
+fishing_pole = Product("Camping", "Fishing Pole", 80)
+sleeping_bag = Product("Camping", "Sleeping Bag", 30)
 
-cust.customer_name('Hello')
-print('Good Afternoon ' + Customer.cust_name)
+customer_object.new_product(tent)
+customer_object.new_product(fishing_pole)
+customer_object.new_product(sleeping_bag)
+print(customer_object.cust_cart.products)
+customer_object.cust_cart.cart_total()
 
-cart.add_product('shopping')
-cart.cart_total('products in cart')
-cart.cart_total('total')
+
+
+
+
+
+# customer_object.customer_name()
+# print('Good Afternoon ' + customer_object.cust_name)
+
+# customer_object.add_product('shopping')
+# customer_object.cart_total('products in cart')
+# customer_object.cart_total('total')
 
