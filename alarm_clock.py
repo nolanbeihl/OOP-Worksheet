@@ -9,6 +9,7 @@ class AlarmClock:
     def set_alarm(self):
         user_pref = input('Would you like to set the alarm?: ')
         if user_pref == 'yes':
+            self.set = True
             print('The alarm is set for ' + self.alarm)
         else:
             self.set = False
