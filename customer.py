@@ -4,8 +4,15 @@ cust_cart = ShoppingCart
 
 class Customer:
     def __init__(self, cust_name):
-        cust_name = ''
+        cust_name = ('')
         self.cust_name =  cust_name
+        cust_cart = []
+        ShoppingCart.add_cart = cust_cart
+    
+    def customer_name(self):
+        cust_name = input('How are you doing today, may I ask your name?: ')
+        Customer.cust_name = cust_name
+
 
     def new_product(cust):
         cust_cart.add_product(input('Do you have more shopping to do today?: '))

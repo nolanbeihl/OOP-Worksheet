@@ -1,7 +1,5 @@
 from product import Product
 
-
-
 class ShoppingCart:
     def __init__(self, shopping_cart_products):
         shopping_cart_products += Product.product_name
@@ -11,10 +9,26 @@ class ShoppingCart:
         print(self.add_cart)
     
     def add_product(self):
-        user_input=input('What would you like to add?: ')
-        ShoppingCart.shopping_cart_products = user_input
-        print('Ok, you now have ' + ShoppingCart.shopping_cart_products + ' in your cart')
+        product_cat = input('What type of product are you looking for?: ')
+        Product.product_type = product_cat
+        product_add = input('What is the name of what you are buying?: ')
+        Product.product_name = product_add
+        product_price = input('How much are you willing to pay?: ')
+        Product.product_price = product_price
+        cust_response = input('would you like to get anything else?: ')
+        if cust_response == 'yes':
+            ShoppingCart.add_product(self)
+        else:
+            print('Ok, we can check you out now')
 
+    def cart_total(self):
+        cart_total = sum(Product.product_price)
+        print('Your total today will be $' + cart_total)  
+
+    def cart_contents(self):
+        cart_contents = Product.product_name
+        print('You have ' + cart_contents +' in your cart right now')  
+    
     def remove_all_prodcuts(self):
         leaving = input('Would you like to empty your cart?: ')
         if leaving == 'yes':

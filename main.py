@@ -16,6 +16,9 @@ cust = Customer
 product = Product
 
 cust.customer_name('Hello')
-cart.add_product()
-cart.cart_total('$')
+print('Good Afternoon ' + Customer.cust_name)
+
+cart.add_product('shopping')
+cart.cart_total('products in cart')
+cart.cart_total('total')
 
